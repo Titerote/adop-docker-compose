@@ -273,6 +273,19 @@ jenkins-slave:
     INITIAL_ADMIN_USER: ${INITIAL_ADMIN_USER}
     INITIAL_ADMIN_PASSWORD: ${INITIAL_ADMIN_PASSWORD_PLAIN}
 
+jenkins-slave-php:
+  container_name: jenkins-slave-php
+  restart: always
+  image: accenture/adop-jenkins-slave:0.1.4
+  net: ${CUSTOM_NETWORK_NAME}
+  privileged: true
+  environment:
+    SLAVE_LABELS: "aws ldap php"
+    SWARM_PASSWORD: ${PASSWORD_JENKINS}
+    SLAVE_EXECUTORS: ${SLAVE_EXECUTORS}
+    INITIAL_ADMIN_USER: ${INITIAL_ADMIN_USER}
+    INITIAL_ADMIN_PASSWORD: ${INITIAL_ADMIN_PASSWORD_PLAIN}
+
 selenium-hub:
   container_name: selenium-hub
   restart: always
