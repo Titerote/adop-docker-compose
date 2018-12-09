@@ -276,7 +276,7 @@ jenkins-slave:
 jenkins-slave-php:
   container_name: jenkins-slave-php
   restart: always
-  image: accenture/adop-jenkins-slave:0.1.4
+  image: titerote/adop-jenkins-slave-php:7.2-remi
   net: ${CUSTOM_NETWORK_NAME}
   privileged: true
   environment:
