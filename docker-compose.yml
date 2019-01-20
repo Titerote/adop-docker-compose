@@ -280,7 +280,6 @@ jenkins-slave-php:
   net: ${CUSTOM_NETWORK_NAME}
   privileged: true
   environment:
-    SLAVE_LABELS: "aws ldap php"
     SWARM_PASSWORD: ${PASSWORD_JENKINS}
     SLAVE_EXECUTORS: ${SLAVE_EXECUTORS}
     INITIAL_ADMIN_USER: ${INITIAL_ADMIN_USER}
